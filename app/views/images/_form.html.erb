@@ -1,0 +1,72 @@
+<%= form_for(image) do |f| %>
+  <% if image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_id %>
+    <%= f.text_field :image_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subset %>
+    <%= f.text_field :subset %>
+  </div>
+
+  <div class="field">
+    <%= f.label :original_url %>
+    <%= f.text_field :original_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :original_landing_url %>
+    <%= f.text_field :original_landing_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :license %>
+    <%= f.text_field :license %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author_profile_url %>
+    <%= f.text_field :author_profile_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :original_size %>
+    <%= f.text_field :original_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :original_md5 %>
+    <%= f.text_field :original_md5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thumbnail_300k_url %>
+    <%= f.text_field :thumbnail_300k_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

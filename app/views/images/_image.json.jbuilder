@@ -1,0 +1,2 @@
+json.extract! image, :id, :image_id, :subset, :original_url, :original_landing_url, :license, :author_profile_url, :author, :title, :original_size, :original_md5, :thumbnail_300k_url, :created_at, :updated_at
+json.url image_url(image, format: :json)

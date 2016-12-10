@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @image.image_id %>
+</p>
+
+<p>
+  <strong>Subset:</strong>
+  <%= @image.subset %>
+</p>
+
+<p>
+  <strong>Original url:</strong>
+  <%= @image.original_url %>
+</p>
+
+<p>
+  <strong>Original landing url:</strong>
+  <%= @image.original_landing_url %>
+</p>
+
+<p>
+  <strong>License:</strong>
+  <%= @image.license %>
+</p>
+
+<p>
+  <strong>Author profile url:</strong>
+  <%= @image.author_profile_url %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @image.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @image.title %>
+</p>
+
+<p>
+  <strong>Original size:</strong>
+  <%= @image.original_size %>
+</p>
+
+<p>
+  <strong>Original md5:</strong>
+  <%= @image.original_md5 %>
+</p>
+
+<p>
+  <strong>Thumbnail 300k url:</strong>
+  <%= @image.thumbnail_300k_url %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
