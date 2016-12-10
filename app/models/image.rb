@@ -18,4 +18,8 @@ class Image
   def labels
     Label.in(id: image_labels.pluck(:label_id))
   end
+
+  def label_names
+    labels.pluck(:name)
+  end
 end
