@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @image_label.image_id %>
+</p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @image_label.label_id %>
+</p>
+
+<p>
+  <strong>Confidence:</strong>
+  <%= @image_label.confidence %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @image_label.source %>
+</p>
+
+<%= link_to 'Edit', edit_image_label_path(@image_label) %> |
+<%= link_to 'Back', image_labels_path %>

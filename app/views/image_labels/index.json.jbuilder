@@ -1,0 +1,1 @@
+json.array! @image_labels, partial: 'image_labels/image_label', as: :image_label

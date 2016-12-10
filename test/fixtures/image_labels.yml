@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_id: MyString
+  label_id: MyString
+  confidence: MyString
+  source: MyString
+
+two:
+  image_id: MyString
+  label_id: MyString
+  confidence: MyString
+  source: MyString

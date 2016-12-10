@@ -1,0 +1,1 @@
+json.partial! "image_labels/image_label", image_label: @image_label
