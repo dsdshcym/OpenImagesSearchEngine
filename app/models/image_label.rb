@@ -1,6 +1,6 @@
 class ImageLabel
   include Mongoid::Document
-  field :confidence, type: String
+  field :confidence, type: Float
   field :source, type: String
 
   belongs_to :image
