@@ -14,4 +14,8 @@ class Image
   field :thumbnail_300k_url, type: String
 
   has_many :image_labels
+
+  def labels
+    Label.in(id: image_labels.pluck(:label_id))
+  end
 end
