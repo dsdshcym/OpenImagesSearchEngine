@@ -11,4 +11,6 @@ class Image
   field :original_size, type: String
   field :original_md5, type: String
   field :thumbnail_300k_url, type: String
+
+  has_many :image_labels
 end
