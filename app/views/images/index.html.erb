@@ -9,8 +9,9 @@
 
 <div id="gallery">
     <% @images.each do |image| %>
-        <a href="<%= image.original_url %>">
-            <%= image_tag image.original_url %>
+        <% image_url = image.thumbnail_300k_url || image.original_url %>
+        <a href="<%= image_url %>">
+            <%= image_tag image_url %>
         </a>
     <% end %>
 </div>
