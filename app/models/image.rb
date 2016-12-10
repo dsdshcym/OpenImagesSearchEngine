@@ -1,5 +1,7 @@
 class Image
   include Mongoid::Document
+  include Mongoid::Search
+
   field :_id, type: String, default: -> { image_id }
   field :image_id, type: String
   field :subset, type: String
@@ -14,6 +16,8 @@ class Image
   field :thumbnail_300k_url, type: String
 
   has_many :image_labels
+
+  search_in image_labels: :name
 
   def labels
     Label.in(id: image_labels.pluck(:label_id))
