@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
-    @images = Image.page(params[:page])
+    @images = Image.search(params[:query]).page(params[:page])
   end
 
   # GET /images/1
