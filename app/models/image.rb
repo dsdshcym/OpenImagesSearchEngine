@@ -1,5 +1,6 @@
 class Image
   include Mongoid::Document
+  field :_id, type: String, default: -> { image_id }
   field :image_id, type: String
   field :subset, type: String
   field :original_url, type: String
