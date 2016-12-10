@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'mongoid', '~> 6.0.0'
+gem 'mongoid_search'
 
 gem 'kaminari'
 
