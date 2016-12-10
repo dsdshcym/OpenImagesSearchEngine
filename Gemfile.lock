@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/vitalinfo/light-gallery-rails.git
+  revision: c45e8232ad7a74fe9922da017344fa39fce68e69
+  specs:
+    light_gallery_rails (1.2.18)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -167,6 +173,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
+  light_gallery_rails!
   listen (~> 3.0.5)
   mongoid (~> 6.0.0)
   puma (~> 3.0)
