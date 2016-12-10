@@ -25,7 +25,7 @@ class Image
 
   def self.search(query)
     return all if query.blank?
-    regex = /.*(#{query.split.join('|')}).*/
+    regex = /(\W|^)(#{query.split.join('|')})(\W|$)/
     labels = Label.where(name: regex)
     image_labels = ImageLabel.in(label_id: labels.pluck(:id))
     Image.in(id: image_labels.pluck(:image_id).uniq)
