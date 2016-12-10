@@ -5,4 +5,8 @@ class Label
   field :name, type: String
 
   has_many :image_labels
+
+  def images
+    Image.in(id: image_labels.pluck(:image_id))
+  end
 end
