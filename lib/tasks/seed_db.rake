@@ -38,6 +38,6 @@ namespace :seed_db do
 
   def load_csv(headers)
     csv = CSV.new(csv_file, headers: headers)
-    csv.each { |row| yield row }
+    csv.lazy.each { |row| yield row }
   end
 end
