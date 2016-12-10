@@ -6,8 +6,10 @@ namespace :seed_db do
     csv = CSV.parse(csv_file, headers: true)
     csv.each do |row|
       h = row.to_hash.transform_keys(&:underscore)
-      h['label_id'] = h.delete('label_name')
-      ImageLabel.create!(h)
+      h['name'] = Label.find(h.delete('label_name')).name
+      image = Image.find(h.delete('image_id'))
+      image.image_labels << ImageLabel.new(h)
+      image.save!
     end
   end
 
