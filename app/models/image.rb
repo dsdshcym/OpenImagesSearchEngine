@@ -22,4 +22,12 @@ class Image
   def label_names
     labels.pluck(:name)
   end
+
+  def self.search(query)
+    return all if query.blank?
+    regex = /.*(#{query.split.join('|')}).*/
+    labels = Label.where(name: regex)
+    image_labels = ImageLabel.in(label_id: labels.pluck(:id))
+    Image.in(id: image_labels.pluck(:image_id).uniq)
+  end
 end
