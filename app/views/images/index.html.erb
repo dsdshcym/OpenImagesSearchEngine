@@ -7,7 +7,7 @@
     <%= submit_tag 'Search' %>
 <% end %>
 
-<div id="lightgallery">
+<div id="gallery">
     <% @images.each do |image| %>
         <a href="<%= image.original_url %>">
             <%= image_tag image.original_url %>
@@ -21,6 +21,7 @@
 
 <script type="text/javascript">
  $(document).ready(function() {
-     $("#lightGallery").lightGallery();
+     $("#gallery").lightGallery();
+     $("#gallery").justifiedGallery();
  });
 </script>
