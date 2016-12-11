@@ -35,6 +35,10 @@ gem 'kaminari'
 gem 'light_gallery_rails', git: 'https://github.com/vitalinfo/light-gallery-rails.git'
 gem 'jquery-justified-gallery-rails'
 
+group :production do
+  gem 'unicorn'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
